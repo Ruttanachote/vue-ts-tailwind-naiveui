@@ -1,0 +1,9 @@
+{
+	"tabWidth": 4,
+	"useTabs": true,
+	"semi": false,
+	"printWidth": 120,
+	"trailingComma": "none",
+	"arrowParens": "avoid",
+	"htmlWhitespaceSensitivity": "ignore"
+}

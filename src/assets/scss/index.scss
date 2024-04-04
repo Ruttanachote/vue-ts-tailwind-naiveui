@@ -1,0 +1,152 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "_variables";
+@import "common";
+@import "helpers";
+@import "fonts";
+@import "router-animations";
+@import "naive-override";
+
+html,
+body {
+	text-size-adjust: 100%;
+	-webkit-tap-highlight-color: transparent;
+	-webkit-touch-callout: none;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility;
+	line-height: 1.35;
+	font-size: 15px;
+
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+
+	width: 100vw;
+	width: 100svw;
+	height: 100vh;
+	height: 100svh;
+	overflow: hidden;
+
+	&:focus {
+		outline: none;
+	}
+}
+
+[v-cloak] {
+	display: none !important;
+}
+
+::view-transition-old(root),
+::view-transition-new(root) {
+	animation: none;
+	mix-blend-mode: normal;
+}
+::view-transition-old(root) {
+	z-index: 1;
+}
+::view-transition-new(root) {
+	z-index: 99999;
+}
+
+::selection {
+	background-color: var(--primary-020-color);
+}
+
+#app {
+	width: 100vw;
+	height: 100vh;
+	overflow: auto;
+}
+
+* {
+	//user-select: none;
+}
+
+input {
+	accent-color: var(--primary-color);
+}
+
+p {
+	color: var(--fg-secondary-color);
+}
+
+code,
+kbd,
+samp,
+pre {
+	font-family: var(--font-family-mono);
+}
+
+code {
+	padding: 1px 6px;
+	border-radius: var(--border-radius-small);
+	background-color: var(--hover-005-color);
+	font-size: 13px;
+}
+pre {
+	border-radius: var(--border-radius-small);
+
+	code {
+		padding: 12px;
+		display: block;
+		overflow-x: auto;
+	}
+}
+
+a {
+	text-decoration: underline;
+	text-decoration-color: var(--primary-color);
+}
+
+blockquote {
+	display: block;
+	padding-left: 1em;
+	border-left: 4px solid var(--border-color);
+}
+
+dl {
+	dt {
+		font-weight: bold;
+		margin-bottom: 2px;
+	}
+
+	& > dd:not(:last-child) {
+		margin-bottom: 10px;
+	}
+}
+
+ul {
+	display: block;
+	list-style-type: disc;
+	padding-left: 20px;
+	line-height: 1.6;
+
+	ul {
+		list-style-type: circle;
+		margin-top: 3px;
+		margin-bottom: 6px;
+	}
+}
+
+ol {
+	display: block;
+	list-style-type: decimal;
+	padding-left: 20px;
+	line-height: 1.6;
+
+	ol {
+		list-style-type: decimal;
+		margin-top: 3px;
+		margin-bottom: 6px;
+	}
+}
+
+mark {
+	padding: 2px 0px;
+	border-radius: var(--border-radius-small);
+	background-color: var(--primary-030-color);
+	color: var(--fg-color);
+}

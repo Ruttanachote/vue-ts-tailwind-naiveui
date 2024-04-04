@@ -1,0 +1,90 @@
+.scrollbar-styled {
+	/* Works on Firefox */
+
+	scrollbar-width: thin;
+	scrollbar-color: var(--hover-010-color) var(--bg-secondary-color);
+
+	/* Works on Chrome, Edge, and Safari */
+	&::-webkit-scrollbar,
+	::-webkit-scrollbar {
+		width: 12px;
+	}
+
+	&::-webkit-scrollbar-track,
+	::-webkit-scrollbar-track {
+		background: var(--bg-secondary-color);
+	}
+
+	&::-webkit-scrollbar-thumb,
+	::-webkit-scrollbar-thumb {
+		background-color: var(--hover-010-color);
+		border-radius: 20px;
+		border: 2px solid var(--bg-secondary-color);
+	}
+}
+
+.item-appear {
+	&.item-appear-bottom {
+		animation: item-fade-bottom 0.3s forwards;
+		opacity: 0;
+	}
+	&.item-appear-up {
+		animation: item-fade-up 0.3s forwards;
+		opacity: 0;
+	}
+
+	&.item-appear-005 {
+		@for $i from 0 through 40 {
+			&:nth-child(#{$i}) {
+				animation-delay: $i * 0.05s;
+			}
+		}
+	}
+	&.item-appear-010 {
+		@for $i from 0 through 40 {
+			&:nth-child(#{$i}) {
+				animation-delay: $i * 0.1s;
+			}
+		}
+	}
+}
+
+@keyframes item-fade-bottom {
+	from {
+		opacity: 0;
+		transform: translateY(10px);
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes item-fade-up {
+	from {
+		opacity: 0;
+		transform: translateY(-10px);
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+.bg-color {
+	background-color: var(--bg-color);
+}
+
+.border-radius {
+	border-radius: var(--border-radius);
+}
+
+.font-mono {
+	font-family: var(--font-family-mono);
+}
+
+.text-primary-color {
+	color: var(--primary-color);
+}
+
+.text-secondary-color {
+	color: var(--fg-secondary-color);
+}
