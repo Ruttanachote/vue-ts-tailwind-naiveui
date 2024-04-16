@@ -1,9 +1,9 @@
 version: "3.3"
 services:
-    pinx-vue-kit:
+    ruttanachot:
         build:
             context: .
-        container_name: pinx-vue-kit
+        container_name: ruttanachot
         restart: unless-stopped
         ports:
             - 3000:3000
