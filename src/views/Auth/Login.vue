@@ -1,7 +1,5 @@
 <template>
 	<div class="page-auth">
-		<Settings v-model:align="align" v-model:activeColor="activeColor" v-if="!isLogged" />
-
 		<div class="flex wrapper justify-center" v-if="!isLogged">
 			<div class="image-box basis-2/3" v-if="align === 'right'"></div>
 			<div class="form-box basis-1/3 flex items-center justify-center" :class="{ centered: align === 'center' }">
@@ -14,7 +12,6 @@
 
 <script lang="ts" setup>
 import AuthForm from "@/components/AuthForm/index.vue"
-import Settings, { type Align } from "@/components/AuthForm/Settings.vue"
 import { ref, computed, onBeforeMount, toRefs } from "vue"
 import { useRoute } from "vue-router"
 import { useAuthStore } from "@/stores/auth"
@@ -26,7 +23,7 @@ const props = defineProps<{
 const { formType } = toRefs(props)
 
 const route = useRoute()
-const align = ref<Align>("left")
+const align = ref("center")
 const activeColor = ref("")
 const type = ref<FormType | undefined>(formType.value || undefined)
 

@@ -134,14 +134,7 @@
 						<n-button class="!w-full !mb-3" strong secondary type="primary" @click="reset()">
 							Restore default
 						</n-button>
-						<a
-							href="https://pinx-docs.vercel.app/layout"
-							target="_blank"
-							alt="docs"
-							rel="nofollow noopener noreferrer"
-						>
-							Other settings
-						</a>
+					
 					</div>
 				</n-scrollbar>
 			</div>
@@ -405,7 +398,7 @@ function reset() {
 
 	&.open {
 		width: 230px;
-		height: 615px;
+		height: 600px;
 		right: 16px;
 		border-radius: var(--border-radius);
 		max-height: 90vh;

@@ -58,7 +58,7 @@ const router = useRouter()
 const formRef = ref<FormInst | null>(null)
 const message = useMessage()
 const model = ref<ModelType>({
-	email: "admin@admin.com",
+	email: "ruttanachot.kaeyai@comtech.com",
 	password: "password"
 })
 
@@ -89,7 +89,7 @@ function signIn(e: Event) {
 	e.preventDefault()
 	formRef.value?.validate((errors: Array<FormValidationError> | undefined) => {
 		if (!errors) {
-			if (model.value.email === "admin@admin.com" && model.value.password === "password") {
+			if (model.value.email === "ruttanachot.kaeyai@comtech.com" && model.value.password === "password") {
 				authStore.setLogged()
 				router.push({ path: "/", replace: true })
 			} else {

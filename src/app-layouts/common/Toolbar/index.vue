@@ -4,10 +4,8 @@
 			<Logo mini class="cursor-pointer" @click="openNav()" />
 
 			<Breadcrumb class="grow" />
-			<PinnedPages />
 
 			<div class="bubble flex items-center">
-				<Search />
 				<LocaleSwitch />
 				<FullscreenSwitch />
 				<ThemeSwitch />
@@ -23,8 +21,6 @@ import { onMounted, toRefs } from "vue"
 import Logo from "../Logo.vue"
 import Breadcrumb from "./Breadcrumb.vue"
 import Avatar from "./Avatar.vue"
-import Search from "./Search.vue"
-import PinnedPages from "./PinnedPages.vue"
 import ThemeSwitch from "./ThemeSwitch.vue"
 import Notifications from "./Notifications.vue"
 import LocaleSwitch from "./LocaleSwitch.vue"

@@ -5,7 +5,6 @@
 			<div class="view" :class="[{ boxed }, `route-${routeName}`]">
 				<slot></slot>
 			</div>
-			<FooterEL :boxed="boxed" v-if="footerShown" />
 		</n-scrollbar>
 	</div>
 </template>
@@ -15,7 +14,6 @@ import { computed, ref, onMounted } from "vue"
 import { NScrollbar } from "naive-ui"
 import { useRoute, useRouter } from "vue-router"
 import Toolbar from "@/app-layouts/common/Toolbar/index.vue"
-import FooterEL from "@/app-layouts/common/FooterEL.vue"
 import { useThemeStore } from "@/stores/theme"
 
 defineOptions({
@@ -28,7 +26,6 @@ const route = useRoute()
 const routeName = computed<string>(() => route.name?.toString() || "")
 const sidebarCollapsed = computed(() => themeStore.sidebar.collapsed)
 const boxed = computed(() => themeStore.isBoxed)
-const footerShown = computed(() => themeStore.isFooterShown)
 const toolbarBoxed = computed(() => themeStore.isToolbarBoxed)
 const scrollbar = ref()
 

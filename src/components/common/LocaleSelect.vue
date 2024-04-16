@@ -39,12 +39,8 @@ function renderLabel(option: SelectOption): VNodeChild {
 			{},
 			{
 				default: () => {
-					if (option.label === "it") return t("italian")
+					if (option.label === "th") return t("thai")
 					if (option.label === "en") return t("english")
-					if (option.label === "es") return t("spanish")
-					if (option.label === "fr") return t("french")
-					if (option.label === "de") return t("german")
-					if (option.label === "jp") return t("japanese")
 				}
 			}
 		)

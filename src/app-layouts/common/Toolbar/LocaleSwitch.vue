@@ -10,8 +10,6 @@ import Icon from "@/components/common/Icon.vue"
 import { useStoreI18n } from "@/composables/useStoreI18n"
 import { computed, h, type VNodeChild } from "vue"
 
-const MultiLanguageIcon = "ion:language-outline"
-
 const { getAvailableLocales, getLocale, setLocale, t } = useStoreI18n()
 
 const list = computed(() =>
@@ -25,6 +23,8 @@ const currentLocale = computed({
 	get: () => getLocale(),
 	set: v => setLocale(v)
 })
+
+const MultiLanguageIcon = computed(() => `circle-flags:${currentLocale.value}`)
 
 function renderLabel(option: SelectOption): VNodeChild {
 	return [
@@ -41,12 +41,8 @@ function renderLabel(option: SelectOption): VNodeChild {
 			{},
 			{
 				default: () => {
-					if (option.label === "it") return t("italian")
+					if (option.label === "th") return t("thai")
 					if (option.label === "en") return t("english")
-					if (option.label === "es") return t("spanish")
-					if (option.label === "fr") return t("french")
-					if (option.label === "de") return t("german")
-					if (option.label === "jp") return t("japanese")
 				}
 			}
 		)

@@ -14,7 +14,7 @@
 				</div>
 				<div class="info grow flex flex-col justify-center">
 					<div class="name">
-						<h1>Margie Dibbert</h1>
+						<h1>Ruttanachot Kaeyai</h1>
 					</div>
 					<div class="details flex flex-wrap">
 						<div class="item">
@@ -22,29 +22,19 @@
 								<template #trigger>
 									<div class="tooltip-wrap">
 										<Icon :name="RoleIcon"></Icon>
-										<span>Editor</span>
+										<span>Software Engineer</span>
 									</div>
 								</template>
 								<span>Role</span>
 							</n-tooltip>
 						</div>
-						<div class="item">
-							<n-tooltip placement="top">
-								<template #trigger>
-									<div class="tooltip-wrap">
-										<Icon :name="LocationIcon"></Icon>
-										<span>New York No. 1 Lake Park</span>
-									</div>
-								</template>
-								<span>Location</span>
-							</n-tooltip>
-						</div>
+						
 						<div class="item">
 							<n-tooltip placement="top">
 								<template #trigger>
 									<div class="tooltip-wrap">
 										<Icon :name="MailIcon"></Icon>
-										<span>sigmund67@gmail.com</span>
+										<span>ruttanachot.kaeyai@comtech.dev</span>
 									</div>
 								</template>
 								<span>Contacts</span>
@@ -62,41 +52,21 @@
 					</ImageCropper>
 				</div>
 			</div>
-			<div class="section-selector">
-				<n-tabs v-model:value="tabActive">
-					<n-tab name="activity">Activity</n-tab>
-					<n-tab name="settings">Settings</n-tab>
-				</n-tabs>
-			</div>
 		</n-card>
-		<div class="main">
-			<n-tabs :tab-style="{ display: 'none' }" v-model:value="tabActive" animated>
-				<n-tab-pane name="activity">
-					<ProfileActivity />
-				</n-tab-pane>
-				<n-tab-pane name="settings">
-					<ProfileSettings />
-				</n-tab-pane>
-			</n-tabs>
-		</div>
 	</div>
 </template>
 
 <script lang="ts" setup>
-import { NAvatar, NButton, NTooltip, NTab, NTabs, NTabPane, NCard } from "naive-ui"
+import { NAvatar, NButton, NTooltip, NCard } from "naive-ui"
 import { ref } from "vue"
 import ImageCropper, { type ImageCropperResult } from "@/components/common/ImageCropper.vue"
-import ProfileActivity from "@/components/profile/ProfileActivity.vue"
-import ProfileSettings from "@/components/profile/ProfileSettings.vue"
 import Icon from "@/components/common/Icon.vue"
 
 const RoleIcon = "tabler:user"
-const LocationIcon = "tabler:map-pin"
 const EditIcon = "uil:image-edit"
 const MailIcon = "tabler:mail"
 
-const tabActive = ref("activity")
-const propic = ref("/images/avatar-200.jpg")
+const propic = ref("/images/avatar.jpg")
 
 function setCroppedImage(result: ImageCropperResult) {
 	const canvas = result.canvas as HTMLCanvasElement
