@@ -29,5 +29,8 @@ export default defineConfig({
 	},
 	optimizeDeps: {
 		include: ["fast-deep-equal"]
+	},
+	server: {
+		port: 3000
 	}
 })
