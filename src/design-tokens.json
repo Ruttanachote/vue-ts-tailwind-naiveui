@@ -66,7 +66,7 @@
 			"textSecondary": "#495465",
 			"background": "#ffffff",
 			"backgroundSecondary": "#fafbfc",
-			"primary": "rgb(0, 178, 123)",
+			"primary": "rgb(255, 1, 86)",
 			"primary005": "rgba(0, 178, 123, 0.05)",
 			"primary010": "rgba(0, 178, 123, 0.1)",
 			"primary015": "rgba(0, 178, 123, 0.15)",
