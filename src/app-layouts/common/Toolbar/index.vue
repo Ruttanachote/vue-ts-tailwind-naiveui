@@ -27,7 +27,7 @@ import LocaleSwitch from "./LocaleSwitch.vue"
 import FullscreenSwitch from "./FullscreenSwitch.vue"
 import { useLoadingBar } from "naive-ui"
 import { useRouter } from "vue-router"
-import { useMainStore } from "@/stores/main"
+// import { useMainStore } from "@/stores/main"
 import { useThemeStore } from "@/stores/theme"
 
 const router = useRouter()
@@ -42,7 +42,7 @@ const props = defineProps<{
 const { boxed } = toRefs(props)
 
 const themeStore = useThemeStore()
-const mainStore = useMainStore()
+// const mainStore = useMainStore()
 
 function openNav() {
 	themeStore.openSidebar()
@@ -52,7 +52,7 @@ onMounted(() => {
 	const loadingBar = useLoadingBar()
 	router.beforeEach(() => loadingBar?.start())
 	router.afterEach(() => loadingBar?.finish())
-	mainStore.setLoadingBar(loadingBar)
+	// mainStore.setLoadingBar(loadingBar)
 })
 </script>
 

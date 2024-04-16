@@ -1,39 +1,13 @@
 <template>
-	<div class="logo" v-if="isDark && !mini">
-		<img src="@/assets/images/brand-logo_dark.svg?url" />
-	</div>
-	<div class="logo" v-else-if="isLight && !mini">
-		<img src="@/assets/images/brand-logo_light.svg?url" />
-	</div>
-	<div class="logo" v-else-if="isDark && mini">
-		<img src="@/assets/images/brand-icon_dark.svg?url" />
-	</div>
-	<div class="logo" v-else-if="isLight && mini">
-		<img src="@/assets/images/brand-icon_light.svg?url" />
+	<div class="logo">
+		<img src="@/assets/images/logo.png?url" />
 	</div>
 </template>
 
 <script lang="ts" setup>
-import { useThemeStore } from "@/stores/theme"
-import { computed, toRefs } from "vue"
-
 defineOptions({
 	name: "Logo"
 })
-
-const props = withDefaults(
-	defineProps<{
-		mini: boolean
-		dark?: boolean
-	}>(),
-	{ dark: undefined }
-)
-const { mini, dark } = toRefs(props)
-
-const themeStore = useThemeStore()
-
-const isDark = computed<boolean>(() => dark.value ?? themeStore.isThemeDark)
-const isLight = computed<boolean>(() => !dark.value || themeStore.isThemeLight)
 </script>
 
 <style lang="scss" scoped>

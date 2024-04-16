@@ -1,6 +1,6 @@
 {
-	"name": "pinx-vue-kit",
-	"version": "1.7.0",
+	"name": "vue3",
+	"version": "1.1.0",
 	"private": true,
 	"scripts": {
 		"dev": "vite",
@@ -8,9 +8,6 @@
 		"build-only": "vite build",
 		"preview": "vite build && echo '' && vite preview --port 4173 --host",
 		"preview-only": "vite preview --port 4173 --host",
-		"test:unit": "vitest run --environment jsdom",
-		"test:e2e": "start-server-and-test preview http://localhost:4173/ 'cypress open --e2e'",
-		"test:e2e:ci": "start-server-and-test preview http://localhost:4173/ 'cypress run --e2e'",
 		"type-check": "vue-tsc --noEmit -p tsconfig.vitest.json --composite false",
 		"lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
 		"tailwind-config-viewer": "tailwind-config-viewer -o",

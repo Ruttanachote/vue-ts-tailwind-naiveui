@@ -13,7 +13,6 @@
 		</component>
 
 		<SplashScreen :loading="loading" />
-		<SearchDialog v-if="isLogged" />
 		<LayoutSettings />
 	</Provider>
 </template>
@@ -29,7 +28,6 @@ import Blank from "@/app-layouts/Blank/index.vue"
 import Provider from "@/app-layouts/common/Provider.vue"
 import SplashScreen from "@/app-layouts/common/SplashScreen.vue"
 import LayoutSettings from "@/components/common/LayoutSettings.vue"
-import SearchDialog from "@/components/common/SearchDialog.vue"
 import { Layout, RouterTransition, type ThemeName } from "@/types/theme.d"
 import { type RouteLocationNormalized, useRouter, useRoute } from "vue-router"
 import "@/assets/scss/index.scss"
