@@ -8,7 +8,7 @@ This project aims to provide a streamlined development experience for building u
 - UI layout powered by Naive UI, a modern Vue-based UI library.
 - Styling with Tailwind CSS, a utility-first CSS framework.
 - Customization options available to tailor the project to your specific needs.
-
+- ICON https://icon-sets.iconify.design/
 ## Getting Started
 To get started with this project, follow the steps below:
 
